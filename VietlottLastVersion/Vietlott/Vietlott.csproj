@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0B01795-0C1B-41B8-80A7-227AE4AB658C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vietlott</RootNamespace>
+    <AssemblyName>Vietlott</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoCircleLableCtrl">
+      <HintPath>..\AutoCircleLableCtrl\AutoCircleLableCtrl\bin\Debug\AutoCircleLableCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="CircleButton">
+      <HintPath>..\CircleButton\CircleButton\bin\Debug\CircleButton.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormKetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKetQua.Designer.cs">
+      <DependentUpon>FormKetQua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLuatChoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLuatChoi.Designer.cs">
+      <DependentUpon>FormLuatChoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuaySo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuaySo.Designer.cs">
+      <DependentUpon>FormQuaySo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeOfTicket.cs" />
+    <EmbeddedResource Include="FormKetQua.resx">
+      <DependentUpon>FormKetQua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLuatChoi.resx">
+      <DependentUpon>FormLuatChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuaySo.resx">
+      <DependentUpon>FormQuaySo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\904ADFDE-ED57-48C5-ADAE-D87D60779E9E.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\9530D679-0E48-45F8-9E00-1508FDBF133F-721A896F-4430-43D7-86B5-6AE9775097A7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\banner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Co-cau-thuong-Mega-645.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\doso_output_nd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\E4D6162E-0791-417A-A69F-93EE5F6EEF17.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\global_navigation_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logofooter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logofooter2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logo-vietlott-300x300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\mega645_20191120065543.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\mega-645_full-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logofooter3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logofooter4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logofooter5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\backarrow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
